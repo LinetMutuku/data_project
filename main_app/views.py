@@ -72,7 +72,7 @@ def search_employees(request):
 
 
 @login_required
-@permission_required('main_app.chnage_employee', raise_exception=True)
+@permission_required('main_app.change_employee', raise_exception=True)
 def employee_update(request, emp_id):
     employee = get_object_or_404(Employee, pk=emp_id)  # SELECT * FROM employees  WHERE id=1
     if request.method == 'POST':
